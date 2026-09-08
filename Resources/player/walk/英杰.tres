@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://d005eg5pp8nh5"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_spqpf"]
+[ext_resource type="Texture2D" uid="uid://cxapht0puoosb" path="res://art/player/英杰.png" id="2_spqpf"]
+
+[resource]
+script = ExtResource("1_spqpf")
+card_name = "英杰"
+type = 2
+mana = 30
+attack = 300.0
+health = 1500.0
+speed = 80.0
+attack_range = 40.0
+attack_coolingdown = 1.0
+tetxure = ExtResource("2_spqpf")
+target_attribute = Array[int]([2])
+special_effects = Array[int]([6])
+possibility = 1.0
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

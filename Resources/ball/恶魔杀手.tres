@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://c5je0db8xfohs"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_jcy4j"]
+[ext_resource type="Texture2D" uid="uid://ue2wuj0f6a7e" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T01-59-07.png" id="2_wo2hy"]
+
+[resource]
+script = ExtResource("1_jcy4j")
+ball_name = "恶魔杀手"
+effect = 5
+target_attribute = 3
+texture = ExtResource("2_wo2hy")
+modulate = Color(0.28085896, 0.48424345, 1, 1)
+discription = "可以免疫恶魔的毒击"
+possibility = 1.0
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

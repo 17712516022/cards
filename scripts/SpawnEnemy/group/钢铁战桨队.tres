@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EnemyGroup" format=3 uid="uid://tn5bl4bgxh5f"]
+
+[ext_resource type="Script" uid="uid://dbxaisl5fa8vc" path="res://scripts/SpawnEnemy/group/enemy_group.gd" id="1_ti5ao"]
+
+[resource]
+script = ExtResource("1_ti5ao")
+type = 22
+metadata/_custom_type_script = "uid://dbxaisl5fa8vc"

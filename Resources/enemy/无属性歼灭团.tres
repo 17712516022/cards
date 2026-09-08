@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyCardResource" format=3 uid="uid://cb2jb4m47dmji"]
+
+[ext_resource type="Script" uid="uid://bbyx0pq10p20o" path="res://Resources/enemy/EnemyCardResource.gd" id="1_3w3xd"]
+[ext_resource type="Texture2D" uid="uid://xbk6sspfstu" path="res://art/player/歼灭团.png" id="2_vjjse"]
+
+[resource]
+script = ExtResource("1_3w3xd")
+card_name = "歼灭团"
+attack = 600.0
+health = 500.0
+speed = 200.0
+attack_range = 20.0
+attack_coolingdown = 5.0
+max_targets = 1
+tetxure = ExtResource("2_vjjse")
+modulate = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://bbyx0pq10p20o"

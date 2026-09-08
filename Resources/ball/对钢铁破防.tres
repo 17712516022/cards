@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://cgdbs472yg1op"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_yd2vv"]
+[ext_resource type="Texture2D" uid="uid://dstauwn5ig61g" path="res://art/ball/defense_down_ball.png" id="2_ih10k"]
+
+[resource]
+script = ExtResource("1_yd2vv")
+ball_name = "对钢铁破防"
+effect = 3
+target_attribute = 4
+texture = ExtResource("2_ih10k")
+modulate = Color(0.16862746, 0.16862746, 0.16862746, 1)
+discription = "攻击后可以令钢铁防御降低"
+duration = 1000
+multiplier = 1.5
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://bbfx0sdvxxwyy"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_ks4wy"]
+[ext_resource type="Texture2D" uid="uid://xbk6sspfstu" path="res://art/player/歼灭团.png" id="2_ks4wy"]
+
+[resource]
+script = ExtResource("1_ks4wy")
+card_name = "歼灭团"
+type = 2
+mana = 25
+attack = 250.0
+health = 1000.0
+speed = 100.0
+attack_range = 20.0
+attack_coolingdown = 0.5
+max_targets = 1
+tetxure = ExtResource("2_ks4wy")
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

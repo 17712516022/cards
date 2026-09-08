@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://csag7udo73rtc"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_mwjxx"]
+[ext_resource type="Texture2D" uid="uid://cfpyhnw2o7lv" path="res://art/player/天命.png" id="2_oeqky"]
+
+[resource]
+script = ExtResource("1_mwjxx")
+card_name = "天命"
+mana = 10
+attack = 400.0
+health = 999999.0
+attack_range = 50.0
+attack_coolingdown = 999999.0
+tetxure = ExtResource("2_oeqky")
+target_attribute = Array[int]([2])
+special_effects = Array[int]([1, 0])
+duration = 3000
+multiplier = 0.1
+possibility = 1.0
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

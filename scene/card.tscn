@@ -1,0 +1,323 @@
+[gd_scene format=3 uid="uid://cy0cm8xq01nbi"]
+
+[ext_resource type="Script" uid="uid://cfkiw02ygk0kr" path="res://scripts/card.gd" id="1_kikvd"]
+[ext_resource type="Texture2D" uid="uid://b6c5s8y8gjnfb" path="res://art/shadow.png" id="2_a47wm"]
+[ext_resource type="Texture2D" uid="uid://85rcyqn6gfiu" path="res://art/player/空帝雷.png" id="3_1s5ce"]
+[ext_resource type="Script" uid="uid://doo0tycrglygs" path="res://scripts/SpecialEffects/EffectComponent.gd" id="4_irop6"]
+[ext_resource type="Script" uid="uid://b6514mkfwoggh" path="res://scripts/states/CardStateMachine.gd" id="4_md2gi"]
+[ext_resource type="Script" uid="uid://j850crw57tx" path="res://scripts/SpecialEffects/EffectSlowDown.gd" id="5_jdt11"]
+[ext_resource type="Texture2D" uid="uid://df6wkt7x5bbd" path="res://art/effects/icon_slow.png" id="6_riygm"]
+[ext_resource type="Script" uid="uid://b77xfcsmlslpk" path="res://scripts/SpecialEffects/EffectAttackDown.gd" id="6_y87ln"]
+[ext_resource type="Script" uid="uid://ngnp44p1mmyg" path="res://scripts/SpecialEffects/EffectPauseEnemy.gd" id="7_tom6i"]
+[ext_resource type="Texture2D" uid="uid://cn04iaxeqhd4a" path="res://art/effects/icon_attackdown.png" id="8_2amvn"]
+[ext_resource type="Texture2D" uid="uid://cpdhyr7r8riq3" path="res://art/effects/icon_freeze.png" id="8_y87ln"]
+[ext_resource type="Texture2D" uid="uid://baoere4nk7pbe" path="res://art/effects/game_icon_for__defense_down__o_2026-08-03T09-17-03.png" id="10_ofnt1"]
+[ext_resource type="Script" uid="uid://dhdn2vve8xujq" path="res://scripts/SpecialEffects/EffectBlockDown.gd" id="11_1s5ce"]
+[ext_resource type="Texture2D" uid="uid://do1ncmyybbf4v" path="res://art/die_ani/A_small_cute_cartoon_soul_or_g_2026-08-01T09-02-10.png" id="12_1s5ce"]
+[ext_resource type="Script" uid="uid://daysdcrov711h" path="res://scripts/SpecialEffects/MeatalKiller.gd" id="13_b3m1c"]
+[ext_resource type="Script" uid="uid://bpaamwydrps3w" path="res://scripts/SpecialEffects/DemonKiller.gd" id="14_dmonk"]
+[ext_resource type="Script" uid="uid://batm3o52movan" path="res://scripts/SpecialEffects/AngelKiller.gd" id="15_nfnew"]
+[ext_resource type="Script" uid="uid://chlu4mpj15lg7" path="res://scripts/SpecialEffects/ZombinKiller.gd" id="16_05582"]
+[ext_resource type="Script" uid="uid://c1e5ytem3xhqc" path="res://scripts/SpecialEffects/NoAttributeKiller.gd" id="17_noatt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md2gi"]
+size = Vector2(12.000003, 11.666669)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_co6qv"]
+
+[sub_resource type="Animation" id="Animation_irop6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cardtexture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cardtexture:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cardtexture:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cardtexture:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cardtexture:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("dietexture:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -24)]
+}
+
+[sub_resource type="Animation" id="Animation_md2gi"]
+resource_name = "attack"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cardtexture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-3, -5), Vector2(2, 1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cardtexture:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.54105204, 0.54105204, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cardtexture:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1s5ce"]
+resource_name = "die"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dietexture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -12), Vector2(0, -24)]
+}
+
+[sub_resource type="Animation" id="Animation_a47wm"]
+resource_name = "idle"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cardtexture:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08726646, 0.0, 0.08726646, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_irop6"]
+_data = {
+&"RESET": SubResource("Animation_irop6"),
+&"attack": SubResource("Animation_md2gi"),
+&"die": SubResource("Animation_1s5ce"),
+&"idle": SubResource("Animation_a47wm")
+}
+
+[sub_resource type="Gradient" id="Gradient_md2gi"]
+offsets = PackedFloat32Array(0.004, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 0.49411765, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vkqoe"]
+gradient = SubResource("Gradient_md2gi")
+width = 10
+height = 10
+fill = 1
+fill_from = Vector2(0.48554912, 0.51445085)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_co6qv"]
+lifetime_randomness = 0.08
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(-7, 7, 0)
+direction = Vector3(0, -10, 0)
+initial_velocity_max = 5.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.59999996
+scale_max = 1.4
+hue_variation_min = -0.030000022
+hue_variation_max = 0.049999975
+turbulence_enabled = true
+
+[node name="Card" type="AnimatableBody2D" unique_id=1656014595]
+scale = Vector2(3, 3)
+collision_layer = 2
+script = ExtResource("1_kikvd")
+
+[node name="shadow" type="Sprite2D" parent="." unique_id=1854208896]
+modulate = Color(1, 1, 1, 0.41568628)
+position = Vector2(0, 3)
+texture = ExtResource("2_a47wm")
+
+[node name="CardCollision" type="CollisionShape2D" parent="." unique_id=1408521186]
+position = Vector2(1.5894572e-07, -0.16666684)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_md2gi")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1750827290]
+unique_name_in_owner = true
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1263724077]
+shape = SubResource("CircleShape2D_co6qv")
+
+[node name="cardtexture" type="Sprite2D" parent="." unique_id=812242903]
+unique_name_in_owner = true
+texture = ExtResource("3_1s5ce")
+
+[node name="CardStateMachine" type="Node" parent="." unique_id=557714499]
+unique_name_in_owner = true
+script = ExtResource("4_md2gi")
+
+[node name="CardAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1949929841]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_irop6")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=52647908]
+unique_name_in_owner = true
+emitting = false
+amount = 15
+texture = SubResource("GradientTexture2D_vkqoe")
+lifetime = 0.2
+one_shot = true
+randomness = 0.24
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_co6qv")
+
+[node name="SpecialEffects" type="Node2D" parent="." unique_id=735700257]
+unique_name_in_owner = true
+position = Vector2(0, -8.666666)
+scale = Vector2(0.01, 0.01)
+script = ExtResource("4_irop6")
+
+[node name="SlowDown" type="Node2D" parent="SpecialEffects" unique_id=916645256]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("5_jdt11")
+
+[node name="SlowdownSprite2D" type="Sprite2D" parent="SpecialEffects/SlowDown" unique_id=2086230727]
+texture = ExtResource("6_riygm")
+
+[node name="AttackDown" type="Node2D" parent="SpecialEffects" unique_id=622763954]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("6_y87ln")
+
+[node name="attackdownSprite2D" type="Sprite2D" parent="SpecialEffects/AttackDown" unique_id=1231644310]
+texture = ExtResource("8_2amvn")
+
+[node name="Pause" type="Node2D" parent="SpecialEffects" unique_id=983371680]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("7_tom6i")
+
+[node name="pauseSprite2D" type="Sprite2D" parent="SpecialEffects/Pause" unique_id=1171322208]
+texture = ExtResource("8_y87ln")
+
+[node name="BlockDown" type="Node2D" parent="SpecialEffects" unique_id=1187624645]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("11_1s5ce")
+
+[node name="pauseSprite2D" type="Sprite2D" parent="SpecialEffects/BlockDown" unique_id=1408812480]
+texture = ExtResource("10_ofnt1")
+
+[node name="MetalKiller" type="Node2D" parent="SpecialEffects" unique_id=1345176073]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("13_b3m1c")
+
+[node name="DemonKiller" type="Node2D" parent="SpecialEffects" unique_id=1545176073]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("14_dmonk")
+
+[node name="AngelKiller" type="Node2D" parent="SpecialEffects" unique_id=1779670939]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("15_nfnew")
+
+[node name="ZombinKiller" type="Node2D" parent="SpecialEffects" unique_id=518117477]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("16_05582")
+
+[node name="NoAttributeKiller" type="Node2D" parent="SpecialEffects" unique_id=618117477]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("17_noatt")
+
+[node name="dietexture" type="Sprite2D" parent="." unique_id=234845106]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, -24)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("12_1s5ce")

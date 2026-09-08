@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://ca4wx3agqrihu"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_e763g"]
+[ext_resource type="Texture2D" uid="uid://dtbicqhrxrjkc" path="res://art/player/黑帝斯.png" id="2_e763g"]
+
+[resource]
+script = ExtResource("1_e763g")
+card_name = "黑帝斯"
+type = 2
+mana = 35
+attack = 50.0
+health = 8000.0
+speed = 30.0
+attack_range = 20.0
+attack_coolingdown = 0.5
+tetxure = ExtResource("2_e763g")
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

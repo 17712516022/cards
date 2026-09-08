@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://ch7ikqottxupe"]
+
+[ext_resource type="Script" uid="uid://bv8ck1umjbfky" path="res://scripts/ui.gd" id="1_s2f8l"]
+[ext_resource type="Texture2D" uid="uid://cvgfo1g6siwm6" path="res://art/ui/game_UI_background_for_card_ha_2026-08-01T04-23-46.png" id="2_ajaei"]
+[ext_resource type="Texture2D" uid="uid://cja2iagrgkx5" path="res://art/ui/draw_card.png" id="2_s2f8l"]
+[ext_resource type="Texture2D" uid="uid://d1txwi5v1g18" path="res://art/ui/draw_card_disabled.png" id="3_xh8xk"]
+[ext_resource type="Texture2D" uid="uid://dw8032orbf7hp" path="res://art/ui/draw_card_pressed.png" id="4_ytdjg"]
+[ext_resource type="PackedScene" uid="uid://yxd25rr2ntn" path="res://scene/cardmessage.tscn" id="5_msg"]
+[ext_resource type="Texture2D" uid="uid://vvj8cat60ys5" path="res://art/ui/mana.png" id="5_ytdjg"]
+[ext_resource type="Texture2D" uid="uid://78p66l6nyw7a" path="res://art/ui/A_game_UI_icon_for_engrave_emb_2026-08-02T07-58-54.png" id="7_d87ij"]
+[ext_resource type="Texture2D" uid="uid://puv2mgfvjftv" path="res://art/ui/A_very_simple_minimalist_game__2026-08-02T05-49-17.png" id="8_vqisl"]
+[ext_resource type="PackedScene" uid="uid://dsdyknlvf5rit" path="res://scene/equip_panel.tscn" id="9_equip"]
+[ext_resource type="Texture2D" uid="uid://bq08dedrvsgrq" path="res://art/ui/A_clean_game_UI_icon_for_disca_2026-08-02T07-24-44.png" id="10_n2xhd"]
+[ext_resource type="Script" uid="uid://b8k0flvk21w78" path="res://scripts/GameOver.gd" id="12_1ipsn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tom6i"]
+texture = ExtResource("2_ajaei")
+texture_margin_top = 4.0
+expand_margin_left = 48.0
+expand_margin_right = 48.0
+expand_margin_bottom = 12.0
+modulate_color = Color(1, 1, 1, 0.75686276)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkqoe"]
+size = Vector2(98, 98)
+
+[node name="UI" type="CanvasLayer" unique_id=2109651385]
+script = ExtResource("1_s2f8l")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1335555731]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -257.0
+offset_top = -111.0
+offset_right = 259.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tom6i")
+
+[node name="handcard" type="HBoxContainer" parent="PanelContainer" unique_id=152963440]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="ManaContainer" type="HBoxContainer" parent="." unique_id=1741064382]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/separation = -11
+
+[node name="TextureRect" type="TextureRect" parent="ManaContainer" unique_id=630807644]
+custom_maximum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("5_ytdjg")
+
+[node name="ManaLabel" type="Label" parent="ManaContainer" unique_id=1434589118]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "fali:100000"
+horizontal_alignment = 1
+
+[node name="CardMessage" parent="." unique_id=402497236 instance=ExtResource("5_msg")]
+
+[node name="EquipPanel" parent="." unique_id=1938475621 instance=ExtResource("9_equip")]
+visible = false
+offset_bottom = -135.0
+
+[node name="equipButtonContainer" type="VBoxContainer" parent="." unique_id=958793036]
+custom_maximum_size = Vector2(100, 100)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="EquipButton" type="TextureButton" parent="equipButtonContainer" unique_id=21005081]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("8_vqisl")
+texture_pressed = ExtResource("7_d87ij")
+stretch_mode = 0
+
+[node name="CardDecisionContainer" type="HBoxContainer" parent="." unique_id=72340031]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -144.0
+offset_right = 100.0
+grow_vertical = 0
+theme_override_constants/separation = 17
+
+[node name="DrawButtonContainer" type="VBoxContainer" parent="CardDecisionContainer" unique_id=1708022247]
+layout_mode = 2
+theme_override_constants/separation = -4
+
+[node name="drawcardmanacontainer" type="HBoxContainer" parent="CardDecisionContainer/DrawButtonContainer" unique_id=1555652590]
+layout_mode = 2
+theme_override_constants/separation = -32
+
+[node name="drawcardmanalabel" type="Label" parent="CardDecisionContainer/DrawButtonContainer/drawcardmanacontainer" unique_id=166403388]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "20"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CardDecisionContainer/DrawButtonContainer/drawcardmanacontainer" unique_id=1111684887]
+custom_maximum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("5_ytdjg")
+
+[node name="DrawCardButton" type="TextureButton" parent="CardDecisionContainer/DrawButtonContainer" unique_id=1877495351]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_s2f8l")
+texture_pressed = ExtResource("3_xh8xk")
+texture_hover = ExtResource("4_ytdjg")
+texture_disabled = ExtResource("3_xh8xk")
+stretch_mode = 0
+
+[node name="DiscordCarsContainer" type="VBoxContainer" parent="CardDecisionContainer" unique_id=855266144]
+layout_mode = 2
+
+[node name="discordcardLabel" type="Label" parent="CardDecisionContainer/DiscordCarsContainer" unique_id=1284183648]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CardDecisionContainer/DiscordCarsContainer" unique_id=1100868323]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("10_n2xhd")
+
+[node name="discordcardArea" type="Area2D" parent="CardDecisionContainer/DiscordCarsContainer/TextureRect" unique_id=1917880840]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDecisionContainer/DiscordCarsContainer/TextureRect/discordcardArea" unique_id=1148339020]
+position = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_vkqoe")
+
+[node name="LoseOrWin" type="Control" parent="." unique_id=1492184526]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_1ipsn")
+
+[node name="GameOver" type="ColorRect" parent="LoseOrWin" unique_id=710597487]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4745098)
+
+[node name="ColorRect" type="ColorRect" parent="LoseOrWin" unique_id=1154950885]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -189.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5411765)
+
+[node name="AgainButton" type="Button" parent="LoseOrWin/ColorRect" unique_id=1385097082]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -89.0
+offset_right = 64.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "再来一次"
+
+[node name="GameOverLabel" type="Label" parent="LoseOrWin" unique_id=1386318348]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -188.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 140
+text = "You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="equipButtonContainer/EquipButton" to="." method="_on_equip_button_pressed"]
+[connection signal="pressed" from="CardDecisionContainer/DrawButtonContainer/DrawCardButton" to="." method="_on_draw_card_button_pressed"]

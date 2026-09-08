@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://cc0c7gye8ang2"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_msr78"]
+[ext_resource type="Texture2D" uid="uid://djh1fjc03upos" path="res://art/player/大魔导师.png" id="2_msr78"]
+
+[resource]
+script = ExtResource("1_msr78")
+card_name = "大魔导师"
+type = 2
+mana = 25
+attack = 500.0
+health = 1200.0
+speed = 50.0
+attack_range = 60.0
+attack_coolingdown = 2.0
+max_targets = 3
+tetxure = ExtResource("2_msr78")
+target_attribute = Array[int]([3])
+special_effects = Array[int]([3])
+duration = 3000
+multiplier = 3.0
+possibility = 0.5
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

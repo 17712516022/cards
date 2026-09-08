@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://dvg80dvuq5a1a"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_nu4p6"]
+[ext_resource type="Texture2D" uid="uid://dstauwn5ig61g" path="res://art/ball/defense_down_ball.png" id="2_gdt7k"]
+
+[resource]
+script = ExtResource("1_nu4p6")
+ball_name = "对天使破防"
+effect = 3
+target_attribute = 2
+texture = ExtResource("2_gdt7k")
+modulate = Color(0.75686276, 0.70980394, 0.29803923, 1)
+discription = "攻击后可以令天使防御降低"
+duration = 1000
+multiplier = 1.5
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://dgsnje2aemn4g"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_t476x"]
+[ext_resource type="Texture2D" uid="uid://c5rfi7y3vjaa2" path="res://art/player/天龙城.png" id="2_mw3ge"]
+
+[resource]
+script = ExtResource("1_t476x")
+card_name = "天龙城"
+type = 1
+mana = 40
+attack = 1500.0
+health = 6000.0
+attack_range = 30.0
+attack_coolingdown = 5.0
+tetxure = ExtResource("2_mw3ge")
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

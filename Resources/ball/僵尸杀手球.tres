@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://cpos3i0l2ft3c"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_vtffu"]
+[ext_resource type="Texture2D" uid="uid://dh5whsxpi4o30" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T02-00-17.png" id="2_n26fi"]
+
+[resource]
+script = ExtResource("1_vtffu")
+ball_name = "僵尸杀手"
+effect = 7
+target_attribute = 1
+texture = ExtResource("2_n26fi")
+modulate = Color(0.6990912, 0.3034432, 0.81666845, 1)
+discription = "攻击后可以阻止僵尸复活"
+possibility = 1.0
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

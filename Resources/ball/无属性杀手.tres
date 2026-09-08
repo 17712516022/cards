@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://crvol3p0pjdbi"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_uilb1"]
+[ext_resource type="Texture2D" uid="uid://m8gdkpkcb4s6" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T02-02-33.png" id="2_77blo"]
+
+[resource]
+script = ExtResource("1_uilb1")
+ball_name = "无属性杀手"
+effect = 8
+texture = ExtResource("2_77blo")
+modulate = Color(1, 1, 1, 1)
+discription = "对无属性敌人造成更多伤害"
+possibility = 1.0
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

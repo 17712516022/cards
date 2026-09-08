@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://c5fuaopsi885i"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_syrfr"]
+[ext_resource type="Texture2D" uid="uid://43jywp6b2lov" path="res://art/player/勇者斗恶龙.png" id="2_45n33"]
+
+[resource]
+script = ExtResource("1_syrfr")
+card_name = "勇者斗恶龙"
+type = 2
+mana = 20
+attack = 400.0
+health = 2000.0
+speed = 20.0
+attack_range = 60.0
+attack_coolingdown = 5.0
+max_targets = 1
+tetxure = ExtResource("2_45n33")
+target_attribute = Array[int]([3, 1, 0])
+special_effects = Array[int]([0])
+duration = 2000
+multiplier = 0.1
+possibility = 1.0
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

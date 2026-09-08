@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://b8hq7m3p2r6k1"]
+
+[ext_resource type="Script" uid="uid://thltnkw0wpoy" path="res://scripts/DeckEdit/deck_edit_panel.gd" id="1_panel"]
+[ext_resource type="Script" uid="uid://hgh3p5u4qd7y" path="res://scripts/DeckEdit/deck_slot.gd" id="2_b6kr1"]
+
+[node name="DeckEditPanel" type="Control" unique_id=2061792311]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_panel")
+
+[node name="Bg" type="ColorRect" parent="." unique_id=1656368844]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.1, 1)
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=438532768]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="SlotLabel" type="Label" parent="VBox" unique_id=1070690401]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.8)
+theme_override_font_sizes/font_size = 27
+text = "出战卡组"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SlotContainer" type="HBoxContainer" parent="VBox" unique_id=121956457]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="DeckSlot" type="Control" parent="VBox/SlotContainer" unique_id=1193621322]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot2" type="Control" parent="VBox/SlotContainer" unique_id=205571963]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot3" type="Control" parent="VBox/SlotContainer" unique_id=123492626]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot4" type="Control" parent="VBox/SlotContainer" unique_id=912254191]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot5" type="Control" parent="VBox/SlotContainer" unique_id=1286438430]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot6" type="Control" parent="VBox/SlotContainer" unique_id=1970492666]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot7" type="Control" parent="VBox/SlotContainer" unique_id=340775278]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot8" type="Control" parent="VBox/SlotContainer" unique_id=316324218]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot9" type="Control" parent="VBox/SlotContainer" unique_id=1204940015]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="DeckSlot10" type="Control" parent="VBox/SlotContainer" unique_id=1331358503]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+script = ExtResource("2_b6kr1")
+metadata/_custom_type_script = "uid://hgh3p5u4qd7y"
+
+[node name="Header" type="HBoxContainer" parent="VBox" unique_id=1498063576]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 2
+
+[node name="Title" type="Label" parent="VBox/Header" unique_id=121371538]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "选择卡组"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sep1" type="HSeparator" parent="VBox" unique_id=964738336]
+layout_mode = 2
+
+[node name="Scroll" type="ScrollContainer" parent="VBox" unique_id=520267365]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CardPool" type="VBoxContainer" parent="VBox/Scroll" unique_id=1136594459]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Sep2" type="HSeparator" parent="VBox" unique_id=735572399]
+layout_mode = 2
+
+[node name="ConfirmBtn" type="Button" parent="VBox" unique_id=1504106435]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "开始冒险"

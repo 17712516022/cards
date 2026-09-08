@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dd1xclx3oe03y"]
+
+[ext_resource type="Script" uid="uid://bce301wgx8rcv" path="res://scripts/SpawnEnemy/enemy_spawn.gd" id="1_q66ti"]
+[ext_resource type="Script" uid="uid://dx0s664ymtg1p" path="res://scripts/SpawnEnemy/EnemySpawnManager.gd" id="2_hwqt1"]
+[ext_resource type="Script" uid="uid://b3jls212x0uv" path="res://scripts/SpawnEnemy/wave/wave_config.gd" id="3_rvv5o"]
+[ext_resource type="Resource" uid="uid://b12kh0mdmhgrs" path="res://scripts/SpawnEnemy/wave/第一波.tres" id="4_gi3ve"]
+[ext_resource type="Resource" uid="uid://ciqqbk5x23ghd" path="res://scripts/SpawnEnemy/wave/第二波.tres" id="5_i463j"]
+[ext_resource type="Resource" uid="uid://dx8av11q0000c" path="res://scripts/SpawnEnemy/wave/第三波.tres" id="6_examo"]
+[ext_resource type="Resource" uid="uid://bub1pa43kc8ey" path="res://scripts/SpawnEnemy/wave/第四波.tres" id="7_lff6o"]
+[ext_resource type="Resource" uid="uid://clx6abp2m37b7" path="res://scripts/SpawnEnemy/wave/第五波.tres" id="8_iglsw"]
+[ext_resource type="Resource" uid="uid://b8sikdmwjad18" path="res://scripts/SpawnEnemy/wave/第六波.tres" id="9_y5q24"]
+[ext_resource type="Resource" uid="uid://dmg1bccbncep5" path="res://scripts/SpawnEnemy/wave/第七波.tres" id="10_gmm7e"]
+[ext_resource type="Resource" uid="uid://527okg4iy4ak" path="res://scripts/SpawnEnemy/wave/第八波.tres" id="11_7s68y"]
+[ext_resource type="Resource" uid="uid://clglfaes2pby5" path="res://scripts/SpawnEnemy/wave/第九波.tres" id="12_puy8m"]
+[ext_resource type="Resource" uid="uid://nnp0giwo1cml" path="res://scripts/SpawnEnemy/wave/第十波.tres" id="13_3g6rq"]
+
+[node name="EnemySpawn" type="Node2D" unique_id=1686780401]
+script = ExtResource("1_q66ti")
+
+[node name="EnemySpawnManager" type="Node2D" parent="." unique_id=1142337138]
+script = ExtResource("2_hwqt1")
+wave_configs = Array[ExtResource("3_rvv5o")]([ExtResource("4_gi3ve"), ExtResource("5_i463j"), ExtResource("6_examo"), ExtResource("7_lff6o"), ExtResource("8_iglsw"), ExtResource("9_y5q24"), ExtResource("10_gmm7e"), ExtResource("11_7s68y"), ExtResource("12_puy8m"), ExtResource("13_3g6rq")])

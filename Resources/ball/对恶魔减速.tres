@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://cjblbe4wuoa3a"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_qkehf"]
+[ext_resource type="Texture2D" uid="uid://fips21dngdsv" path="res://art/ball/slow_ball.png" id="2_cer2f"]
+
+[resource]
+script = ExtResource("1_qkehf")
+ball_name = "对恶魔减速"
+effect = 1
+target_attribute = 3
+texture = ExtResource("2_cer2f")
+modulate = Color(0.28235295, 0.48235294, 1, 1)
+discription = "攻击后可以令恶魔移动速度降低"
+duration = 1000
+multiplier = 0.2
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

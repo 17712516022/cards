@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://chno8f3ou4rv1"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_joeql"]
+[ext_resource type="Texture2D" uid="uid://bwodcfowpgt31" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T01-53-10.png" id="2_mhkja"]
+
+[resource]
+script = ExtResource("1_joeql")
+ball_name = "对恶魔时停"
+effect = 2
+target_attribute = 3
+texture = ExtResource("2_mhkja")
+modulate = Color(0.28235295, 0.48235294, 1, 1)
+discription = "攻击后可以令恶魔动作瞬间停止"
+duration = 1000
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

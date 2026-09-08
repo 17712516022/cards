@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://oh7s417cqpgx"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="2_caxvx"]
+[ext_resource type="Texture2D" uid="uid://b4shi77abkmng" path="res://art/player/战桨队.png" id="3_caxvx"]
+
+[resource]
+script = ExtResource("2_caxvx")
+card_name = "战桨队"
+type = 2
+mana = 15
+attack = 100.0
+health = 1000.0
+speed = 80.0
+attack_range = 50.0
+attack_coolingdown = 2.0
+tetxure = ExtResource("3_caxvx")
+target_attribute = Array[int]([0])
+special_effects = Array[int]([8])
+possibility = 1.0
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

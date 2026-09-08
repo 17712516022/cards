@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="WaveConfig" format=3 uid="uid://clglfaes2pby5"]
+
+[ext_resource type="Script" uid="uid://dbxaisl5fa8vc" path="res://scripts/SpawnEnemy/group/enemy_group.gd" id="1_xklki"]
+[ext_resource type="Resource" uid="uid://djveo45hm0qoe" path="res://scripts/SpawnEnemy/group/僵尸猛枪战队.tres" id="2_7solv"]
+[ext_resource type="Resource" uid="uid://jwlf1me5pcyu" path="res://scripts/SpawnEnemy/group/天使死亡小丑.tres" id="3_6g461"]
+[ext_resource type="Script" uid="uid://b3jls212x0uv" path="res://scripts/SpawnEnemy/wave/wave_config.gd" id="3_7solv"]
+[ext_resource type="Resource" uid="uid://bwne656b77vky" path="res://scripts/SpawnEnemy/group/无属性战桨队.tres" id="4_psvxi"]
+
+[resource]
+script = ExtResource("3_7solv")
+enemies = Array[ExtResource("1_xklki")]([ExtResource("2_7solv"), ExtResource("3_6g461"), ExtResource("4_psvxi"), ExtResource("4_psvxi"), ExtResource("2_7solv")])
+metadata/_custom_type_script = "uid://b3jls212x0uv"

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c0vvcst0541xc"]
+
+[ext_resource type="Script" uid="uid://dpkm1go7wn7jg" path="res://scripts/Equip/BallUi.gd" id="1_3lfii"]
+[ext_resource type="Texture2D" uid="uid://27a80vto8t2i" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T01-58-28.png" id="2_ih3vn"]
+
+[node name="BallUi" type="Control" unique_id=308107434]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+offset_bottom = 20.0
+script = ExtResource("1_3lfii")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1322445826]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="balluiTexture" type="TextureRect" parent="HBoxContainer" unique_id=1040466770]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+custom_maximum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_ih3vn")
+
+[node name="BallDescription" type="Label" parent="HBoxContainer" unique_id=1808235729]
+unique_name_in_owner = true
+layout_mode = 2
+text = "华府国际分级管控"

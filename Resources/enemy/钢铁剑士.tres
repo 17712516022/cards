@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyCardResource" format=3 uid="uid://bkgmtrpmule52"]
+
+[ext_resource type="Script" uid="uid://bbyx0pq10p20o" path="res://Resources/enemy/EnemyCardResource.gd" id="1_hibbn"]
+[ext_resource type="Texture2D" uid="uid://hwr2oy446wvc" path="res://art/player/剑士.png" id="2_fcwvh"]
+
+[resource]
+script = ExtResource("1_hibbn")
+card_name = "剑士"
+attack = 100.0
+health = 800.0
+speed = 20.0
+attack_range = 30.0
+attack_coolingdown = 1.0
+max_targets = 1
+tetxure = ExtResource("2_fcwvh")
+modulate = Color(0.2051174, 0.20511746, 0.20511737, 1)
+attribute = 4
+metadata/_custom_type_script = "uid://bbyx0pq10p20o"

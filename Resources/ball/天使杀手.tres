@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://c617enpvekxkf"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_a0wmt"]
+[ext_resource type="Texture2D" uid="uid://bwnj5ot42gctf" path="res://art/ball/angel_killer_ball.png" id="2_em2k6"]
+
+[resource]
+script = ExtResource("1_a0wmt")
+ball_name = "天使杀手"
+effect = 6
+target_attribute = 2
+texture = ExtResource("2_em2k6")
+modulate = Color(0.75686276, 0.70980394, 0.29803923, 1)
+discription = "可以不受天使敌人的特殊效果"
+possibility = 1.0
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

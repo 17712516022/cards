@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EnemyCardResource" format=3 uid="uid://u0gisc83seuu"]
+
+[ext_resource type="Script" uid="uid://bbyx0pq10p20o" path="res://Resources/enemy/EnemyCardResource.gd" id="1_ah5jw"]
+[ext_resource type="Texture2D" uid="uid://d16q1f6jsa8i0" path="res://art/player/弓箭.png" id="2_7fl4c"]
+
+[resource]
+script = ExtResource("1_ah5jw")
+card_name = "弓箭"
+attack = 100.0
+health = 800.0
+speed = 40.0
+attack_range = 50.0
+attack_coolingdown = 1.0
+tetxure = ExtResource("2_7fl4c")
+modulate = Color(0.83137256, 0.8, 0.14901961, 1)
+attribute = 2
+duration = 1500
+multiplier = 0.5
+possibility = 0.5
+metadata/_custom_type_script = "uid://bbyx0pq10p20o"

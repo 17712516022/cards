@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bevmkn2oilyar"]
+
+[ext_resource type="Script" uid="uid://dagow7fqshy8x" path="res://scripts/Equip/Ball.gd" id="1_script"]
+[ext_resource type="Resource" uid="uid://crxjayrd0vucw" path="res://Resources/ball/钢铁杀手球.tres" id="2_3lk0k"]
+[ext_resource type="Texture2D" uid="uid://27a80vto8t2i" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T01-58-28.png" id="3_j2xpw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vkqoe"]
+radius = 11.0
+
+[node name="Ball" type="Node2D" unique_id=206613859]
+script = ExtResource("1_script")
+ball_resource = ExtResource("2_3lk0k")
+
+[node name="BallSprite2D" type="Sprite2D" parent="." unique_id=136624482]
+unique_name_in_owner = true
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("3_j2xpw")
+
+[node name="BallArea" type="Area2D" parent="." unique_id=1202638636]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BallArea" unique_id=1674932421]
+shape = SubResource("CircleShape2D_vkqoe")

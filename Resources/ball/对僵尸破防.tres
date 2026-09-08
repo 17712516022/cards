@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://cwa5tnqp3n4ko"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_bddh8"]
+[ext_resource type="Texture2D" uid="uid://dstauwn5ig61g" path="res://art/ball/defense_down_ball.png" id="2_bddh8"]
+
+[resource]
+script = ExtResource("1_bddh8")
+ball_name = "对僵尸破防"
+effect = 3
+target_attribute = 1
+texture = ExtResource("2_bddh8")
+modulate = Color(0.69803923, 0.3019608, 0.8156863, 1)
+discription = "攻击后可以令僵尸防御降低"
+duration = 1000
+multiplier = 1.5
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

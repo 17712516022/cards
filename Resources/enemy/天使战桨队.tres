@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EnemyCardResource" format=3 uid="uid://b6nppktqgl4rm"]
+
+[ext_resource type="Script" uid="uid://bbyx0pq10p20o" path="res://Resources/enemy/EnemyCardResource.gd" id="1_0ay34"]
+[ext_resource type="Texture2D" uid="uid://b4shi77abkmng" path="res://art/player/战桨队.png" id="2_lb8xs"]
+
+[resource]
+script = ExtResource("1_0ay34")
+card_name = "战桨队"
+attack = 100.0
+health = 1200.0
+speed = 50.0
+attack_range = 40.0
+attack_coolingdown = 1.0
+tetxure = ExtResource("2_lb8xs")
+modulate = Color(0.83137256, 0.8, 0.14901961, 1)
+attribute = 2
+duration = 1000
+multiplier = 0.5
+possibility = 1.0
+metadata/_custom_type_script = "uid://bbyx0pq10p20o"

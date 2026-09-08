@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyCardResource" format=3 uid="uid://c6gkl2m65t3ol"]
+
+[ext_resource type="Script" uid="uid://bbyx0pq10p20o" path="res://Resources/enemy/EnemyCardResource.gd" id="1_82qa2"]
+[ext_resource type="Texture2D" uid="uid://dpjsd1wc1x5ee" path="res://art/player/地藏.png" id="2_yhwes"]
+
+[resource]
+script = ExtResource("1_82qa2")
+card_name = "地藏"
+attack = 100.0
+health = 1000.0
+speed = 60.0
+attack_range = 20.0
+attack_coolingdown = 0.5
+max_targets = 1
+tetxure = ExtResource("2_yhwes")
+modulate = Color(0.20392157, 0.20392157, 0.20392157, 1)
+attribute = 4
+metadata/_custom_type_script = "uid://bbyx0pq10p20o"

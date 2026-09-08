@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://kyxhaxhuw84o"]
+
+[ext_resource type="Script" uid="uid://bvveroojhyp55" path="res://scripts/playerbase.gd" id="1_4eh01"]
+[ext_resource type="Texture2D" uid="uid://c8udgd3aod5sf" path="res://art/A_very_simple_pixel_art_castle_2026-08-01T09-30-57.png" id="1_u5hmv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5hmv"]
+size = Vector2(48, 93)
+
+[sub_resource type="Animation" id="Animation_dyr0j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4eh01"]
+resource_name = "hurt"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(4.6817894, 4.6817894, 4.6817894, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dyr0j"]
+_data = {
+&"RESET": SubResource("Animation_dyr0j"),
+&"hurt": SubResource("Animation_4eh01")
+}
+
+[node name="Playerbase" type="Node2D" unique_id=597397557]
+script = ExtResource("1_4eh01")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=46457843]
+scale = Vector2(-0.2, 0.2)
+texture = ExtResource("1_u5hmv")
+
+[node name="basearea" type="Area2D" parent="." unique_id=444939897]
+unique_name_in_owner = true
+position = Vector2(-70, 4)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="basearea" unique_id=139312034]
+position = Vector2(48, 6.5)
+shape = SubResource("RectangleShape2D_u5hmv")
+
+[node name="PlayerBaseLabel" type="Label" parent="." unique_id=1109093978]
+unique_name_in_owner = true
+offset_left = -80.0
+offset_top = -80.0
+offset_right = -8.0
+offset_bottom = -57.0
+offset_transform_enabled = true
+horizontal_alignment = 1
+
+[node name="PlayerBaseAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1633719878]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_dyr0j")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://koto51a7fpi8"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_pqjkr"]
+[ext_resource type="Texture2D" uid="uid://bwodcfowpgt31" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T01-53-10.png" id="2_mm342"]
+
+[resource]
+script = ExtResource("1_pqjkr")
+ball_name = "对天使时停"
+effect = 2
+target_attribute = 2
+texture = ExtResource("2_mm342")
+modulate = Color(0.75686276, 0.70980394, 0.29803923, 1)
+discription = "攻击后可以令天使动作瞬间停止"
+duration = 1000
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

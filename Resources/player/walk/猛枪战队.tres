@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://bpanus0v573ie"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_qwl16"]
+[ext_resource type="Texture2D" uid="uid://dmhqupwl4oxsn" path="res://art/player/猛枪战队.png" id="2_qwl16"]
+
+[resource]
+script = ExtResource("1_qwl16")
+card_name = "猛枪战队"
+type = 2
+mana = 20
+attack = 200.0
+health = 2000.0
+speed = 120.0
+attack_range = 20.0
+attack_coolingdown = 1.0
+max_targets = 3
+tetxure = ExtResource("2_qwl16")
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

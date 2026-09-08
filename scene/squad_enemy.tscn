@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://btvknr6spadcf"]
+
+[ext_resource type="Script" uid="uid://dwy5fqorqbyq4" path="res://scripts/SquadEnemy.gd" id="1_3tebj"]
+
+[node name="SquadEnemy" type="Node2D" unique_id=1525180767]
+script = ExtResource("1_3tebj")

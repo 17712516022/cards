@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://baycjwq7dhjrh"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_4eerw"]
+[ext_resource type="Texture2D" uid="uid://d16q1f6jsa8i0" path="res://art/player/弓箭.png" id="2_1q1al"]
+
+[resource]
+script = ExtResource("1_4eerw")
+card_name = "弓箭"
+type = 1
+mana = 10
+attack = 150.0
+health = 600.0
+attack_range = 70.0
+attack_coolingdown = 1.0
+max_targets = 1
+tetxure = ExtResource("2_1q1al")
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WaveConfig" format=3 uid="uid://dx8av11q0000c"]
+
+[ext_resource type="Script" uid="uid://dbxaisl5fa8vc" path="res://scripts/SpawnEnemy/group/enemy_group.gd" id="1_wpnue"]
+[ext_resource type="Resource" uid="uid://c7y1mllp4jesv" path="res://scripts/SpawnEnemy/group/天使剑士.tres" id="2_vj6p3"]
+[ext_resource type="Script" uid="uid://b3jls212x0uv" path="res://scripts/SpawnEnemy/wave/wave_config.gd" id="3_1ewa8"]
+[ext_resource type="Resource" uid="uid://cmsmch36iyixh" path="res://scripts/SpawnEnemy/group/僵尸剑士.tres" id="3_soj3f"]
+[ext_resource type="Resource" uid="uid://cqjyhkde5hbj2" path="res://scripts/SpawnEnemy/group/天使弓箭.tres" id="4_mtldr"]
+[ext_resource type="Resource" uid="uid://d7sjc3qsd6ee" path="res://scripts/SpawnEnemy/group/无属性地藏.tres" id="5_5gwdb"]
+
+[resource]
+script = ExtResource("3_1ewa8")
+enemies = Array[ExtResource("1_wpnue")]([ExtResource("2_vj6p3"), ExtResource("3_soj3f"), ExtResource("4_mtldr"), ExtResource("5_5gwdb"), ExtResource("5_5gwdb")])
+metadata/_custom_type_script = "uid://b3jls212x0uv"

@@ -1,0 +1,121 @@
+class_name CardUI extends Control
+
+const CARD_SCENE := preload("res://scene/card.tscn")
+const Squad := preload("res://scene/squad_player.tscn")
+
+@export var card_res : CardResource
+
+@onready var card_ui_texture: Sprite2D = $card_front/card_ui_texture
+@onready var card_ui_area: Area2D = $card_front/CardUIArea
+@onready var mana: Label = $card_front/CardManaLabel/mana
+
+var _dragging: bool = false
+var _local_offset: Vector2
+var target_area: Area2D
+var _hand_card: Node
+
+func _enter_tree() -> void:
+	_on_mana_change(ManaManager.current_mana, ManaManager.max_mana)
+	mouse_filter = Control.MOUSE_FILTER_PASS
+
+func _ready() -> void:
+	card_ui_texture.texture = card_res.tetxure
+	mana.text = str(card_res.mana)
+	card_ui_area.area_entered.connect(_on_area_enter_card_ui.bind())
+	card_ui_area.area_exited.connect(_on_area_exit_card_ui.bind())
+	EventBus.mana_changed.connect(_on_mana_change)
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if _is_mouse_inside_card():
+				if not ManaManager.can_afford(card_res.mana):
+					return  # 法力不够，不让拖
+				_start_drag()
+		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed and _dragging:
+			if _is_placement_valid():
+				_end_drag()
+			else:
+				_cancel_drag()
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed and _dragging:
+			_cancel_drag()
+
+func _is_mouse_inside_card() -> bool:
+	var rect = get_global_rect()
+	var card_rect = Rect2(
+		rect.position.x + rect.size.x * 0.5 - 29,
+		rect.position.y + rect.size.y - 90,
+		58,
+		90
+	)
+	return card_rect.has_point(get_global_mouse_position())
+
+func _physics_process(_delta: float) -> void:
+	if _dragging:
+		position = get_global_mouse_position() - _local_offset
+
+func _start_drag() -> void:
+	if _dragging:
+		return
+	_hand_card = get_parent()
+	_local_offset = get_global_mouse_position() - global_position
+	_dragging = true
+
+	var ui_layer = _hand_card.get_parent().get_parent()
+	var saved_global = global_position
+	_hand_card.remove_child(self)
+	ui_layer.add_child(self)
+	global_position = saved_global
+	position = get_global_mouse_position() - _local_offset
+	offset_transform_scale = Vector2(1.5, 1.5)
+
+func _cancel_drag() -> void:
+	get_parent().remove_child(self)
+	_hand_card.add_child(self)
+	_dragging = false
+	offset_transform_scale = Vector2(1, 1)
+
+func _on_area_enter_card_ui(area: Area2D) -> void:
+	target_area = area
+
+func _on_area_exit_card_ui(area: Area2D) -> void:
+	if target_area == area:
+		target_area = null
+
+## 子类重写：当前位置是否可以放置
+func _is_placement_valid() -> bool:
+	return false
+
+## 子类重写：执行放置逻辑（子类开头先调用 ManaManager.spend_mana(card_res.mana)）
+func _end_drag() -> void:
+	_dragging = false
+	play_dissolve_and_free()
+
+
+## 播放卡牌溶解消散动画，动画结束后自动 queue_free
+func play_dissolve_and_free() -> void:
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	# 溶解材质挂在根节点 Control 上，直接取 self 的材质
+	var mat: ShaderMaterial = material if material is ShaderMaterial else null
+
+	if mat:
+		var start_pos := position
+		var tween := create_tween().set_parallel(true).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+		tween.tween_method(_set_dissolve_amount.bind(mat), 0.0, 1.0, 0.55)
+		# 溶解时微微上浮，更有"消散"的感觉
+		tween.tween_property(self, "position", start_pos + Vector2(0, -20), 0.55)
+		tween.chain().tween_callback(queue_free)
+	else:
+		queue_free()
+
+
+func _set_dissolve_amount(value: float, mat: ShaderMaterial) -> void:
+	mat.set_shader_parameter("dissolve_amount", value)
+
+
+func _on_mana_change(current: int, max_: int) -> void:
+	if current < card_res.mana:
+		self.modulate = Color(0.3,0.3,0.3)
+	else :
+		self.modulate = Color(1,1,1)

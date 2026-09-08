@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://cy4tkwsvpjja3"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_raxqr"]
+[ext_resource type="Texture2D" uid="uid://dstauwn5ig61g" path="res://art/ball/defense_down_ball.png" id="2_pbyb2"]
+
+[resource]
+script = ExtResource("1_raxqr")
+ball_name = "对恶魔破防"
+effect = 3
+target_attribute = 3
+texture = ExtResource("2_pbyb2")
+modulate = Color(0.28235295, 0.48235294, 1, 1)
+discription = "攻击后可以令恶魔防御降低"
+duration = 1000
+multiplier = 1.5
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

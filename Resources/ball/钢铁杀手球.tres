@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://crxjayrd0vucw"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_h2lyc"]
+[ext_resource type="Texture2D" uid="uid://27a80vto8t2i" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T01-58-28.png" id="2_4qcby"]
+
+[resource]
+script = ExtResource("1_h2lyc")
+ball_name = "钢铁杀手"
+effect = 4
+target_attribute = 4
+texture = ExtResource("2_4qcby")
+modulate = Color(0.16685283, 0.16685283, 0.16685283, 1)
+discription = "攻击将可以无视钢铁敌人的护盾"
+possibility = 1.0
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

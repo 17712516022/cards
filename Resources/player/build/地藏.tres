@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://blcys5ndk4bc5"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_84w2s"]
+[ext_resource type="Texture2D" uid="uid://dpjsd1wc1x5ee" path="res://art/player/地藏.png" id="2_84w2s"]
+
+[resource]
+script = ExtResource("1_84w2s")
+card_name = "地藏"
+type = 1
+mana = 15
+attack = 200.0
+health = 1200.0
+speed = 50.0
+attack_range = 40.0
+attack_coolingdown = 2.0
+tetxure = ExtResource("2_84w2s")
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

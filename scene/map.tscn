@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://coty2003mn3me"]
+
+[ext_resource type="Script" uid="uid://ciccci1cnbiw7" path="res://scripts/map.gd" id="1_nf54y"]
+[ext_resource type="PackedScene" uid="uid://ch7ikqottxupe" path="res://scene/ui.tscn" id="2_4xw1d"]
+[ext_resource type="PackedScene" uid="uid://dd1xclx3oe03y" path="res://scene/enemy_spawn.tscn" id="3_bq37x"]
+[ext_resource type="Texture2D" uid="uid://tlvgq0v735gd" path="res://art/map_bg.png" id="4_jp76l"]
+[ext_resource type="PackedScene" uid="uid://c3ark61td6ps8" path="res://scene/slots.tscn" id="5_4xw1d"]
+[ext_resource type="PackedScene" uid="uid://i084xnd2imlp" path="res://scene/base.tscn" id="6_bq37x"]
+[ext_resource type="PackedScene" uid="uid://kyxhaxhuw84o" path="res://scene/playerbase.tscn" id="7_jp76l"]
+[ext_resource type="Script" uid="uid://dplknbvrstvjl" path="res://scripts/Equip/BallCreater.gd" id="8_equip"]
+
+[sub_resource type="Curve2D" id="Curve2D_map"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 100, 0, 0, 0, 0, 1000, 100, 0, 0, 0, 0, 1000, 300, 0, 0, 0, 0, 200, 300, 0, 0, 0, 0, 200, 500, 0, 0, 0, 0, 1152, 500)
+}
+point_count = 6
+
+[node name="map" type="Node2D" unique_id=34549150]
+script = ExtResource("1_nf54y")
+
+[node name="Path" type="Path2D" parent="." unique_id=1214584572]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_map")
+
+[node name="UI" parent="." unique_id=2109651385 instance=ExtResource("2_4xw1d")]
+
+[node name="EnemySpawn" parent="." unique_id=1686780401 instance=ExtResource("3_bq37x")]
+unique_name_in_owner = true
+position = Vector2(0, 100)
+
+[node name="MapBg" type="Sprite2D" parent="." unique_id=267591936]
+z_index = -1
+position = Vector2(576, 324)
+texture = ExtResource("4_jp76l")
+
+[node name="SoldierSpawn" type="Node2D" parent="." unique_id=930890119]
+unique_name_in_owner = true
+position = Vector2(1152, 500)
+
+[node name="ALLSlot" type="Node2D" parent="." unique_id=8350094]
+
+[node name="Slots" parent="ALLSlot" unique_id=1954824093 instance=ExtResource("5_4xw1d")]
+position = Vector2(319, 172)
+
+[node name="Slots9" parent="ALLSlot" unique_id=742665445 instance=ExtResource("5_4xw1d")]
+position = Vector2(870, 432)
+
+[node name="Slots10" parent="ALLSlot" unique_id=631117372 instance=ExtResource("5_4xw1d")]
+position = Vector2(579, 431)
+
+[node name="Slots11" parent="ALLSlot" unique_id=2049286735 instance=ExtResource("5_4xw1d")]
+position = Vector2(129, 327)
+
+[node name="Slots12" parent="ALLSlot" unique_id=787274273 instance=ExtResource("5_4xw1d")]
+position = Vector2(869, 370)
+
+[node name="Slots13" parent="ALLSlot" unique_id=385061428 instance=ExtResource("5_4xw1d")]
+position = Vector2(580, 30)
+
+[node name="Slots14" parent="ALLSlot" unique_id=2003850541 instance=ExtResource("5_4xw1d")]
+position = Vector2(579, 370)
+
+[node name="Slots15" parent="ALLSlot" unique_id=2000113367 instance=ExtResource("5_4xw1d")]
+position = Vector2(936, 431)
+
+[node name="Slots2" parent="ALLSlot" unique_id=802124951 instance=ExtResource("5_4xw1d")]
+position = Vector2(930, 170)
+
+[node name="Slots3" parent="ALLSlot" unique_id=598875950 instance=ExtResource("5_4xw1d")]
+position = Vector2(272, 369)
+
+[node name="Slots4" parent="ALLSlot" unique_id=1998320776 instance=ExtResource("5_4xw1d")]
+position = Vector2(272, 429)
+
+[node name="Slots5" parent="ALLSlot" unique_id=1114866331 instance=ExtResource("5_4xw1d")]
+position = Vector2(578, 228)
+
+[node name="Slots7" parent="ALLSlot" unique_id=2053137120 instance=ExtResource("5_4xw1d")]
+position = Vector2(252, 172)
+
+[node name="Slots8" parent="ALLSlot" unique_id=1810520077 instance=ExtResource("5_4xw1d")]
+position = Vector2(1006, 573)
+
+[node name="Slots6" parent="ALLSlot" unique_id=1748243269 instance=ExtResource("5_4xw1d")]
+position = Vector2(935, 370)
+
+[node name="Enemybase" parent="." unique_id=597397557 instance=ExtResource("6_bq37x")]
+position = Vector2(-24, 84)
+
+[node name="Playerbase" parent="." unique_id=530908608 instance=ExtResource("7_jp76l")]
+position = Vector2(1172, 480)
+
+[node name="BallCreater" type="Node" parent="." unique_id=194177951]
+script = ExtResource("8_equip")

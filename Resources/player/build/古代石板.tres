@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://7stmfunk22m3"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_5h3nu"]
+[ext_resource type="Texture2D" uid="uid://bffgo4awtonkl" path="res://art/player/古代石板.png" id="2_dg5ro"]
+
+[resource]
+script = ExtResource("1_5h3nu")
+card_name = "古代石板"
+type = 1
+mana = 20
+attack = 200.0
+health = 1500.0
+attack_range = 40.0
+attack_coolingdown = 2.0
+tetxure = ExtResource("2_dg5ro")
+target_attribute = Array[int]([1])
+special_effects = Array[int]([7, 1])
+duration = 2000
+multiplier = 0.2
+possibility = 1.0
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

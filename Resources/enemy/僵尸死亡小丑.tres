@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyCardResource" format=3 uid="uid://uw5icv0krpj1"]
+
+[ext_resource type="Script" uid="uid://bbyx0pq10p20o" path="res://Resources/enemy/EnemyCardResource.gd" id="1_gnn73"]
+[ext_resource type="Texture2D" uid="uid://cugw0bvr72d4w" path="res://art/player/死亡小丑.png" id="2_i4u8f"]
+
+[resource]
+script = ExtResource("1_gnn73")
+card_name = "死亡小丑"
+attack = 100.0
+health = 1500.0
+speed = 30.0
+attack_range = 50.0
+attack_coolingdown = 1.0
+max_targets = 1
+tetxure = ExtResource("2_i4u8f")
+modulate = Color(0.6862745, 0.2, 0.9098039, 1)
+attribute = 1
+metadata/_custom_type_script = "uid://bbyx0pq10p20o"

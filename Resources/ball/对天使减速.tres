@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://j54frhpnw12k"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_n7skk"]
+[ext_resource type="Texture2D" uid="uid://fips21dngdsv" path="res://art/ball/slow_ball.png" id="2_fqedd"]
+
+[resource]
+script = ExtResource("1_n7skk")
+ball_name = "对天使减速"
+effect = 1
+target_attribute = 2
+texture = ExtResource("2_fqedd")
+modulate = Color(0.75686276, 0.70980394, 0.29803923, 1)
+discription = "攻击后可以令天使移动速度降低"
+duration = 1000
+multiplier = 0.2
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://dyvgusvyujy8x"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_0yr2r"]
+[ext_resource type="Texture2D" uid="uid://cf6x0iawdbxut" path="res://art/player/妖贤女.png" id="2_eyjl5"]
+
+[resource]
+script = ExtResource("1_0yr2r")
+card_name = "妖贤女"
+type = 1
+mana = 25
+attack = 200.0
+health = 1500.0
+attack_range = 60.0
+attack_coolingdown = 1.0
+tetxure = ExtResource("2_eyjl5")
+target_attribute = Array[int]([1])
+special_effects = Array[int]([3])
+duration = 1000
+multiplier = 2.0
+possibility = 0.5
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://brsjbv222ylmy"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_lf2nr"]
+[ext_resource type="Texture2D" uid="uid://bwodcfowpgt31" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T01-53-10.png" id="2_1i555"]
+
+[resource]
+script = ExtResource("1_lf2nr")
+ball_name = "对无属性时停"
+effect = 2
+texture = ExtResource("2_1i555")
+modulate = Color(1, 1, 1, 1)
+discription = "攻击后可以令无属性敌人动作瞬间停止"
+duration = 1000
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

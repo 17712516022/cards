@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://yxd25rr2ntn"]
+
+[ext_resource type="Script" uid="uid://6aqajb0hwugo" path="res://scripts/CardMessage.gd" id="1_msg"]
+[ext_resource type="Texture2D" uid="uid://vvj8cat60ys5" path="res://art/ui/mana.png" id="2_mana"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.08, 0.08, 0.08, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.45, 0.25, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="cardmessage" type="Control" unique_id=1538429340]
+z_index = 100
+layout_mode = 3
+anchors_preset = 0
+offset_right = 180.0
+offset_bottom = 200.0
+mouse_filter = 2
+script = ExtResource("1_msg")
+
+[node name="HideTimer" type="Timer" parent="." unique_id=920011712]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1105910693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1480413580]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="NameLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=865775236]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.5, 1)
+theme_override_font_sizes/font_size = 16
+text = "卡牌名称"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=1767861606]
+layout_mode = 2
+
+[node name="TypeLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=62617763]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "类型: 士兵"
+
+[node name="ManaBox" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1841245046]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/ManaBox" unique_id=1525976055]
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_mana")
+
+[node name="ManaLabel" type="Label" parent="PanelContainer/VBoxContainer/ManaBox" unique_id=1563193387]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "10"
+
+[node name="StatsGrid" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=1192584941]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 1
+columns = 2
+
+[node name="AttackLabel" type="Label" parent="PanelContainer/VBoxContainer/StatsGrid" unique_id=2111442011]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.45, 0.25, 1)
+theme_override_font_sizes/font_size = 13
+text = "攻击: 100"
+
+[node name="HealthLabel" type="Label" parent="PanelContainer/VBoxContainer/StatsGrid" unique_id=1915084059]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.9, 0.3, 1)
+theme_override_font_sizes/font_size = 13
+text = "生命: 1000"
+
+[node name="SpeedLabel" type="Label" parent="PanelContainer/VBoxContainer/StatsGrid" unique_id=680186790]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.2, 1)
+theme_override_font_sizes/font_size = 13
+text = "速度: 80"
+
+[node name="RangeLabel" type="Label" parent="PanelContainer/VBoxContainer/StatsGrid" unique_id=1082340755]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "范围: 30"
+
+[node name="TargetLabel" type="Label" parent="PanelContainer/VBoxContainer/StatsGrid" unique_id=2042352462]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "目标数: 1"
+
+[node name="EffectsSep" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=1390701903]
+layout_mode = 2
+
+[node name="EffectsLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=313323492]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.55, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "效果: "
+autowrap_mode = 3

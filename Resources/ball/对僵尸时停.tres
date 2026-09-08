@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://dl7rfx4gx72ga"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_eyeoc"]
+[ext_resource type="Texture2D" uid="uid://bwodcfowpgt31" path="res://art/ball/pixel_art__only_white_and_gray_2026-08-05T01-53-10.png" id="2_x4sgy"]
+
+[resource]
+script = ExtResource("1_eyeoc")
+ball_name = "对僵尸时停"
+effect = 2
+target_attribute = 1
+texture = ExtResource("2_x4sgy")
+modulate = Color(0.69803923, 0.3019608, 0.8156863, 1)
+discription = "攻击后可以令僵尸动作瞬间停止"
+duration = 1000
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

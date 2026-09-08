@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyCardResource" format=3 uid="uid://c2u4f33ptpyud"]
+
+[ext_resource type="Script" uid="uid://bbyx0pq10p20o" path="res://Resources/enemy/EnemyCardResource.gd" id="1_poi7y"]
+[ext_resource type="Texture2D" uid="uid://dmhqupwl4oxsn" path="res://art/player/猛枪战队.png" id="2_7yknk"]
+
+[resource]
+script = ExtResource("1_poi7y")
+card_name = "猛枪战队"
+attack = 300.0
+health = 800.0
+speed = 20.0
+attack_range = 30.0
+attack_coolingdown = 1.0
+max_targets = 1
+tetxure = ExtResource("2_7yknk")
+modulate = Color(0.6862745, 0.2, 0.9098039, 1)
+attribute = 1
+metadata/_custom_type_script = "uid://bbyx0pq10p20o"

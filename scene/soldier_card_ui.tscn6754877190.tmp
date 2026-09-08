@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://blfuaxc6q8q0t"]
+
+[ext_resource type="Script" uid="uid://b48gehyeth0dq" path="res://scripts/card_ui_soldier.gd" id="1_ujb7t"]
+[ext_resource type="Texture2D" uid="uid://hwr2oy446wvc" path="res://art/player/剑士.png" id="2_g5pu0"]
+[ext_resource type="Texture2D" uid="uid://vvj8cat60ys5" path="res://art/ui/mana.png" id="2_ywgoi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkqoe"]
+size = Vector2(58, 90)
+
+[node name="SoldierCardUI" type="Control" unique_id=574501585]
+layout_mode = 3
+anchors_preset = 0
+offset_transform_enabled = true
+script = ExtResource("1_ujb7t")
+
+[node name="card_back" type="ColorRect" parent="." unique_id=1312015004]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_top = -90.0
+offset_right = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.95686275, 0.14117648, 0, 0.87058824)
+
+[node name="card_front" type="ColorRect" parent="." unique_id=369735044]
+modulate = Color(0.8045509, 0.6884683, 0.48695254, 1)
+custom_minimum_size = Vector2(48, 80)
+custom_maximum_size = Vector2(48, 80)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -85.0
+offset_right = 24.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.94509804, 0.42352942, 0.29411766, 1)
+
+[node name="CardManaLabel" type="HBoxContainer" parent="card_front" unique_id=1842366179]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+offset_right = 28.0
+grow_vertical = 0
+theme_override_constants/separation = -6
+
+[node name="mana" type="Label" parent="card_front/CardManaLabel" unique_id=2138956352]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "20"
+horizontal_alignment = 1
+
+[node name="manasprite" type="TextureRect" parent="card_front/CardManaLabel" unique_id=557699868]
+modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_ywgoi")
+
+[node name="card_ui_texture" type="Sprite2D" parent="card_front" unique_id=193507647]
+unique_name_in_owner = true
+position = Vector2(24, 23.000004)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_g5pu0")
+
+[node name="CardUIArea" type="Area2D" parent="card_front" unique_id=216653279]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+position = Vector2(24, 40)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="card_front/CardUIArea" unique_id=773725347]
+shape = SubResource("RectangleShape2D_vkqoe")

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://bd70x3el2uje"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_t7tmb"]
+[ext_resource type="Texture2D" uid="uid://fips21dngdsv" path="res://art/ball/slow_ball.png" id="2_bsufw"]
+
+[resource]
+script = ExtResource("1_t7tmb")
+ball_name = "对钢铁减速"
+effect = 1
+target_attribute = 4
+texture = ExtResource("2_bsufw")
+modulate = Color(0.16862746, 0.16862746, 0.16862746, 1)
+discription = "攻击后可以令钢铁移动速度降低"
+duration = 1000
+multiplier = 0.2
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

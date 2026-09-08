@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://dwdx54xms7j0a"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_iv6ec"]
+[ext_resource type="Texture2D" uid="uid://c48ku84xngv6n" path="res://art/player/非命.png" id="2_i5s0l"]
+
+[resource]
+script = ExtResource("1_iv6ec")
+card_name = "非命"
+mana = 10
+attack = 400.0
+health = 999999.0
+attack_range = 50.0
+attack_coolingdown = 999999.0
+tetxure = ExtResource("2_i5s0l")
+target_attribute = Array[int]([3])
+special_effects = Array[int]([1, 0])
+duration = 3000
+multiplier = 0.1
+possibility = 1.0
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

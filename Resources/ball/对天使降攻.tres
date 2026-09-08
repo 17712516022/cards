@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpecialEffectBall" format=3 uid="uid://dkvn2surw1103"]
+
+[ext_resource type="Script" uid="uid://dfo7wmjqmml1c" path="res://Resources/ball/specialeffectball.gd" id="1_wg44h"]
+[ext_resource type="Texture2D" uid="uid://bkeau5bmtq7dx" path="res://art/ball/attack_down_ball.png" id="2_gsl0t"]
+
+[resource]
+script = ExtResource("1_wg44h")
+ball_name = "对天使降攻"
+target_attribute = 2
+texture = ExtResource("2_gsl0t")
+modulate = Color(0.75686276, 0.70980394, 0.29803923, 1)
+discription = "攻击后可以令天使攻击降低"
+duration = 1000
+multiplier = 0.5
+possibility = 0.5
+metadata/_custom_type_script = "uid://dfo7wmjqmml1c"

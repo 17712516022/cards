@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://wtd6xau0gfeo"]
+
+[ext_resource type="Script" uid="uid://dro27gq6fm3hk" path="res://Resources/player/CardResource.gd" id="1_ssq5s"]
+[ext_resource type="Texture2D" uid="uid://85rcyqn6gfiu" path="res://art/player/空帝雷.png" id="2_hgdcx"]
+
+[resource]
+script = ExtResource("1_ssq5s")
+card_name = "空帝雷"
+mana = 15
+attack = 2000.0
+health = 999999.0
+attack_range = 30.0
+attack_coolingdown = 999999.0
+tetxure = ExtResource("2_hgdcx")
+metadata/_custom_type_script = "uid://dro27gq6fm3hk"

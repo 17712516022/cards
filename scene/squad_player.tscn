@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cqjepsyiy1l0k"]
+
+[ext_resource type="Script" uid="uid://erigi26pis2c" path="res://scripts/SquadPlayer.gd" id="1_i8kmm"]
+
+[node name="SquadPlayer" type="Node2D" unique_id=1431050426]
+script = ExtResource("1_i8kmm")

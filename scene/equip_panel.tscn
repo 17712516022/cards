@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://dsdyknlvf5rit"]
+
+[ext_resource type="Script" uid="uid://bkyu52eg5nb1e" path="res://scripts/Equip/equip_panel.gd" id="1_script"]
+
+[node name="EquipPanel" type="Control" unique_id=2131427147]
+modulate = Color(1, 1, 1, 0.79607844)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Bg" type="ColorRect" parent="." unique_id=1878576074]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.04, 0.06, 0.95)
+
+[node name="MainEquipPanel" type="VBoxContainer" parent="." unique_id=1782941861]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="TitleBar" type="MarginContainer" parent="MainEquipPanel" unique_id=1882176790]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Title" type="Label" parent="MainEquipPanel/TitleBar" unique_id=1628680060]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "卡牌装备"
+horizontal_alignment = 1
+
+[node name="Content" type="HBoxContainer" parent="MainEquipPanel" unique_id=607828894]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Left" type="MarginContainer" parent="MainEquipPanel/Content" unique_id=1283959940]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="LeftInner" type="VBoxContainer" parent="MainEquipPanel/Content/Left" unique_id=1374149225]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LeftTitle" type="Label" parent="MainEquipPanel/Content/Left/LeftInner" unique_id=1340817989]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "收集的球"
+horizontal_alignment = 1
+
+[node name="BallInvHint" type="Label" parent="MainEquipPanel/Content/Left/LeftInner" unique_id=1026233782]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.4, 0.4, 1)
+theme_override_font_sizes/font_size = 12
+text = "还没有收集到球
+战斗中鼠标移到怪物掉落的球上即可收集"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="MainEquipPanel/Content/Left/LeftInner" unique_id=1129639459]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="BallList" type="VBoxContainer" parent="MainEquipPanel/Content/Left/LeftInner/Scroll" unique_id=461416592]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Vsep" type="VSeparator" parent="MainEquipPanel/Content" unique_id=972611275]
+layout_mode = 2
+
+[node name="Right" type="MarginContainer" parent="MainEquipPanel/Content" unique_id=1959353152]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="RightInner" type="VBoxContainer" parent="MainEquipPanel/Content/Right" unique_id=1114410992]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RightTitle" type="Label" parent="MainEquipPanel/Content/Right/RightInner" unique_id=1583235719]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "出战卡牌 (拖球到卡牌上装备)"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="MainEquipPanel/Content/Right/RightInner" unique_id=634638032]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CardList" type="VBoxContainer" parent="MainEquipPanel/Content/Right/RightInner/Scroll" unique_id=1799563976]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
